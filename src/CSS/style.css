@@ -4,3 +4,51 @@ body {
     font-family: 'Public Sans', sans-serif;
 }
 
+.cabecalho .logo .imagem {
+    width: 100px;
+
+}
+
+.cabecalho{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 25px 0;
+    max-width: 1170px;
+    margin: 0 auto;
+    flex-wrap: wrap;
+}
+
+.cabecalho .logo {
+    display: flex;
+    align-items: center;
+    text-transform: uppercase;
+}
+
+.cabecalho .titulo {
+    font-size: 24px;
+    font-weight: bold;
+    margin-left: 10px;
+    transition: 0.3s ease-in-out;
+}
+
+.cabecalho .titulo:hover {
+    color: #1ED760;
+
+}
+
+.navegacao .menu {
+    display: flex;
+    gap: 20px;
+    
+}
+
+.cabecalho .navegacao .menu .item a {
+    padding: 15px;
+}
+
+.cabecalho .navegacao .menu .item a:hover {
+    background-color: #1ED760;
+    color: white;
+    transition: 0.3s ease-in-out;
+}
