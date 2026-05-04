@@ -3,17 +3,24 @@ const setaAvancar = document.getElementById('btn-avancar');
 const setaVoltar = document.getElementById('btn-voltar');
 let imagemAtual = 0;
 
+function esconderImagens() {
+    imagensPainel.forEach(imagem => {
+        imagem.classList.remove('mostrar');
+    });
+}
+
+function mostrarImagem() {
+    imagensPainel[imagemAtual].classList.add('mostrar');
+}
+
 setaAvancar.addEventListener('click', function() {
     imagemAtual++;
     if (imagemAtual > 2) {
         imagemAtual = 0;
     }
 
-    imagensPainel.forEach(imagem => {
-        imagem.classList.remove('mostrar');
-    });
-
-    imagensPainel[imagemAtual].classList.add('mostrar');
+    esconderImagens();
+    mostrarImagem();
 });
 
 setaVoltar.addEventListener('click', function() {
@@ -22,9 +29,6 @@ setaVoltar.addEventListener('click', function() {
         imagemAtual = 2;
     }
 
-    imagensPainel.forEach(imagem => {
-        imagem.classList.remove('mostrar');
-    });
-    
-    imagensPainel[imagemAtual].classList.add('mostrar');
+    esconderImagens();
+    mostrarImagem();
 });
